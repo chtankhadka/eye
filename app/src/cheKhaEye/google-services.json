@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "161593168945",
+    "project_id": "chekhaeye",
+    "storage_bucket": "chekhaeye.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161593168945:android:5944673171909099e97110",
+        "android_client_info": {
+          "package_name": "com.eye.cheKhaEye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161593168945-i941fbvh8a4h3uctmsm6dk04pegt3uji.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHxzZu8H8TcclgYqs1h3cs6ZsfPTTOo7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161593168945-i941fbvh8a4h3uctmsm6dk04pegt3uji.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

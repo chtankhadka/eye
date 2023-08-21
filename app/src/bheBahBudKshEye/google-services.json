@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "708206761192",
+    "project_id": "bhebahbudksheye",
+    "storage_bucket": "bhebahbudksheye.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708206761192:android:588b91d4cf6f978849655d",
+        "android_client_info": {
+          "package_name": "com.eye.bheBahBudKshEye"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708206761192-vlrig0rlr8tvejoh6e6phur0h95s5i39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtYUAbhdlsLxC_j-KGj7dmBdQV-tb3qCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708206761192-vlrig0rlr8tvejoh6e6phur0h95s5i39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
