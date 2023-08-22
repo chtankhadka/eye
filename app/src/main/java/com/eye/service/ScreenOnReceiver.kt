@@ -30,7 +30,6 @@ class ScreenOnReceiver : BroadcastReceiver() {
         try {
             when (intent?.action){
                 Intent.ACTION_SCREEN_ON -> {
-                    println("hello")
                     val hiltEntryPoint =
                         EntryPointAccessors.fromApplication(context!!, HiltEntryPoint::class.java)
                     val firestoreRepository = hiltEntryPoint.firestoreRepository()

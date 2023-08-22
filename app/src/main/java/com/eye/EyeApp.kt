@@ -39,10 +39,9 @@ class EyeApp : Application(), OneSignal.OSRemoteNotificationReceivedHandler{
 
     }
 
-    @SuppressLint("InvalidPeriodicWorkRequestInterval")
     private fun setupWorker(){
         val constraint = Constraints.Builder().setRequiredNetworkType(NetworkType.CONNECTED).build()
-        val workRequest = PeriodicWorkRequest.Builder(EyeWorker::class.java,1,TimeUnit.MINUTES)
+        val workRequest = PeriodicWorkRequest.Builder(EyeWorker::class.java,1,TimeUnit.HOURS)
             .setConstraints(constraint)
             .build()
         WorkManager.getInstance(this).enqueue(workRequest)

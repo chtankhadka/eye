@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
@@ -22,6 +23,7 @@ import androidx.compose.material.icons.filled.Warning
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.DrawerValue
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -140,14 +142,20 @@ fun AdminScreen(onEvent: (event: AdminEvent) -> Unit, state: AdminState) {
 
                 }
                 if (isCallLog){
-                    LazyColumn(modifier = Modifier, content = {
+                    LazyColumn(
+                        modifier = Modifier.padding(5.dp),
+                        verticalArrangement = Arrangement.spacedBy(10.dp),
+                        content = {
                         items(state.callLogs) {
                             for ((date, callList) in it) {
+                                Spacer(modifier = Modifier.height(5.dp))
                                 Card {
                                     Text(text = "Date:$date")
                                     Spacer(modifier = Modifier.height(5.dp))
                                     for (call in callList) {
-                                        Card {
+                                        Card(
+                                            modifier = Modifier.padding(5.dp),
+                                            colors = CardDefaults.cardColors(MaterialTheme.colorScheme.primaryContainer)) {
                                             Row(
                                                 modifier = Modifier
                                                     .fillMaxWidth(),
@@ -171,14 +179,17 @@ fun AdminScreen(onEvent: (event: AdminEvent) -> Unit, state: AdminState) {
                         }
                     })
                 }else{
-                    LazyColumn(modifier = Modifier, content = {
+                    LazyColumn( modifier = Modifier.padding(5.dp),
+                        verticalArrangement = Arrangement.spacedBy(10.dp), content = {
                         items(state.smsLogs) {
                             for ((date, smsList) in it) {
                                 Card {
                                     Text(text = "Date:$date")
                                     Spacer(modifier = Modifier.height(5.dp))
                                     for (call in smsList) {
-                                        Card {
+
+                                        Card(modifier = Modifier.padding(5.dp),
+                                        colors = CardDefaults.cardColors(MaterialTheme.colorScheme.primaryContainer)) {
                                             Row(
                                                 modifier = Modifier
                                                     .fillMaxWidth(),

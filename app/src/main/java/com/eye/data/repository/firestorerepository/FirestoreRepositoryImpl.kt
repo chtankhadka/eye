@@ -14,7 +14,7 @@ import kotlin.coroutines.suspendCoroutine
 @Singleton
 class FirestoreRepositoryImpl @Inject constructor(
     private val firestore: FirebaseFirestore,
-  private val preference: Preference
+    private val preference: Preference
 ) : FirestoreRepository {
     override suspend fun uploadSMSLog(data: Map<String, List<SMS>>) {
         try {
